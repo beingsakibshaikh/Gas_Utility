@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Gas Utility{% endblock %}</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+</head>
+<body>
+    <nav>
+        <ul >
+            <li id="l2"><a href="{% url 'request_status' %}">Request Status</a></li>
+            <li id="l1"><a href="{% url 'submit_request' %}">Submit Request</a></li>
+           
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+    <div >
+        {% block content %}
+        {% endblock %}
+    </div>
+<br>
+<br>
+<br>
+  
+
+   
+</body>
+</html>

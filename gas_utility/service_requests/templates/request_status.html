@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Request Status{% endblock %}
+
+{% block content %}
+    <h1 id="req">Your Service Requests</h1>
+    <ul>
+        {% for request in requests %}
+            <li id="status">
+                {{ request.request_type }} - {{ request.status }}
+                <p id="para1">Submitted at: {{ request.created_at }}</p>
+                <p id="para2">Last updated: {{ request.updated_at }}</p>
+            </li>
+        {% empty %}
+            <li id="no_req">No requests found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
